@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "1b08046a-7abf-45fd-9195-4611f4de24db",
+		"name": "Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add a club",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"R.C. Celta de Vio\",\n        \"budget\": \"71000000\",\n        \"location\":\"Vigo, Galicia, Spain\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/manager/club/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"manager",
+						"club",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Oscar Mingueza\",\n        \"age\": \"23\",\n        \"country\": \"Spain\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/manager/player/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"manager",
+						"player",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a coach",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"Xavier\",\n        \"age\": \"42\",\n        \"country\": \"Spain\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/manager/coach/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"manager",
+						"coach",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register a player",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"playerId\": \"1\",\n    \"salary\": 1000000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/manager/club/1/addPlayer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"manager",
+						"club",
+						"1",
+						"addPlayer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register a coach",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"coachId\": \"1\",\n    \"salary\": 5000000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/manager/club/2/addCoach",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"manager",
+						"club",
+						"2",
+						"addCoach"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify club Budget",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newBudget\": \"80000000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/manager/club/1/editBudget",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"manager",
+						"club",
+						"1",
+						"editBudget"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Drop a player",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/manager/club/dropPlayer/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"manager",
+						"club",
+						"dropPlayer",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Drop a coach",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/manager/club/dropCoach/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"manager",
+						"club",
+						"dropCoach",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all players club",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/manager/club/1/players?name=",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"manager",
+						"club",
+						"1",
+						"players"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter a player club",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/manager/club/1/players?name=",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"manager",
+						"club",
+						"1",
+						"players"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
